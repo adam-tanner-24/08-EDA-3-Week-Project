@@ -89,8 +89,10 @@ def make_figure(varname):
     
     data_chart = df.groupby([varname])['education-num'].mean().reset_index(name='Avg Education-Num')
     
-    fig = go.Bar(x=data_chart[varname].index.astype(str),
+    data = go.Bar(x=data_chart[varname],
                  y=data_chart['Avg Education-Num'])
+    
+    fig = go.Figure([data])
     #fig = px.bar(data_chart, x=[varname],y='Avg Education-Num')
 
 
