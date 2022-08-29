@@ -14,14 +14,13 @@ githublink = 'https://github.com/adam-tanner-24/08-EDA-3-Week-Project'
 
 
 ########## Set up the chart
-path = 'https://github.com/adam-tanner-24/08-EDA-3-Week-Project/blob/d02c18c57859830bbdb82cc9c8e19af6ac094abe/assets/EDA_Sensus.csv'
+path = 'https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data'
 
 
-df = pd.read_csv(path,
-                 names=["index", "age", "workclass","fnlwgt", "education", "education-num", "marital-status", "occupation", "relationship", "race", "sex", "capital-gain", "capital-loss", "hours-per-week", "native-country"],
-                 index_col=False,
-                 on_bad_lines='skip')
-
+ddf = pd.read_csv(path,
+                names = ["age", "workclass","fnlwgt", "education", "education-num", "marital-status", "occupation", "relationship", "race", "sex", "capital-gain", "capital-loss", "hours-per-week", "native-country"],
+                index_col=False,
+                na_values=[" ?"])
 #Creating apply function to bucketize hours-per-week series
 def hour_per_week_bucket(hour):
     if hour < 10:
@@ -50,7 +49,7 @@ list_of_columns.remove('capital-gain')
 list_of_columns.remove('capital-loss')
 list_of_columns.remove('hours-per-week')
 list_of_columns.remove('fnlwgt')
-list_of_columns.remove('index')
+
 
 
 ########### Initiate the app
