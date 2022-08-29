@@ -68,7 +68,7 @@ app.layout = html.Div([
         options=[{'label': i, 'value': i} for i in list_of_columns],
         value='native-country'),
     html.Br(),
-    html.Div(id='graph-title'),
+    html.Div(id='graph_title'),
     dcc.Graph(id='figure_1'),
     html.Br(),
     html.A('Code on Github', href=githublink),
@@ -79,10 +79,10 @@ app.layout = html.Div([
 
 # make a function that can intake any varname and produce a map.
 @app.callback(Output('figure_1', 'figure'),
-              Output('graph-title', 'children'),
+              Output('graph_title', 'children'),
               [Input('options-drop', 'value')])
 def figure_1(varname):
-    mygraphtitle = f'Analysis on {varname} compared to Education Level'
+    graph_title = f'Analysis on {varname} compared to Education Level'
     mycolorscale = '#e492e8' # Note: The error message will list possible color scales.
     mycolorbartitle = "Average Education Level"
     
@@ -96,7 +96,7 @@ def figure_1(varname):
     
     
     mylayout = go.Layout(
-        title =mygraphtitle)
+        title =graph_title)
     
     fig = go.Figure(data=data, layout=mylayout)
     #fig = px.bar(data_chart, x=[varname],y='Avg Education-Num')
@@ -110,7 +110,7 @@ def figure_1(varname):
     #     colorbar_title = mycolorbartitle,    )
     #fig = go.Figure(data)
     
-    return mygraphtitle,fig
+    return graph_title, fig
 
 
 ############ Deploy
