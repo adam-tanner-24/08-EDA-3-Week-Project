@@ -92,14 +92,11 @@ def figure_1(varname):
     #data = go.Bar(x=data_chart[varname],
                  #y=data_chart['Avg Education-Num'])
     data = go.Bar(x=data_chart[varname],
-                  y=data_chart['Avg Education-Num'],
-                  marker=mycolorscale)
+                  y=data_chart['Avg Education-Num'])
     
     
     mylayout = go.Layout(
-        title =mygraphtitle,
-        xaxis ='Test x axis',
-        yaxis='Test y axis')
+        title =mygraphtitle)
     
     fig = go.Figure(data=data, layout=mylayout)
     #fig = px.bar(data_chart, x=[varname],y='Avg Education-Num')
