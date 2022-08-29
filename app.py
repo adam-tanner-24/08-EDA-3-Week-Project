@@ -17,7 +17,7 @@ githublink = 'https://github.com/adam-tanner-24/08-EDA-3-Week-Project'
 path = 'https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data'
 
 
-ddf = pd.read_csv(path,
+df = pd.read_csv(path,
                 names = ["age", "workclass","fnlwgt", "education", "education-num", "marital-status", "occupation", "relationship", "race", "sex", "capital-gain", "capital-loss", "hours-per-week", "native-country"],
                 index_col=False,
                 na_values=[" ?"])
