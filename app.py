@@ -68,16 +68,18 @@ app.layout = html.Div([
         options=[{'label': i, 'value': i} for i in list_of_columns],
         value='native-country'),
     html.Br(),
+    html.Div(id='graph-title'),
     dcc.Graph(id='figure_1'),
     html.Br(),
     html.A('Code on Github', href=githublink),
     html.Br(),
     html.A("Data Source", href=sourceurl)
-])
+],className='container')
 
 
 # make a function that can intake any varname and produce a map.
 @app.callback(Output('figure_1', 'figure'),
+              Output('graph-title', 'children'),
               [Input('options-drop', 'value')])
 def figure_1(varname):
     mygraphtitle = f'Analysis on {varname} compared to Education Level'
@@ -111,7 +113,7 @@ def figure_1(varname):
     #     colorbar_title = mycolorbartitle,    )
     #fig = go.Figure(data)
     
-    return fig
+    return mygraphtitle,fig
 
 
 ############ Deploy
