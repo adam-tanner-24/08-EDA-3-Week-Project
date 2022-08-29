@@ -42,7 +42,7 @@ df = pd.read_csv(path,
 # df['hours-per-week-bucket']=df['hours-per-week'].apply(hour_per_week_bucket)
 
 
-# list_of_columns=list(df.columns)
+list_of_columns=list(df.columns)
 # list_of_columns.remove('age')
 # list_of_columns.remove('education')
 # list_of_columns.remove('education-num')
