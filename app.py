@@ -62,13 +62,15 @@ app.title=tabtitle
 
 app.layout = html.Div(children=[
     html.H1('Census Data Analysis'),
-    html.Div([
-        html.H6('Select a variable for analysis:'),
+    html.H3('Select a variable for analysis:')
+    html.Div([        
         dcc.Dropdown(
             id='options-drop',
             options=[{'label': i, 'value': i} for i in list_of_columns],
             value='native-country')]), 
+    html.Br(),
     dcc.Graph(id='figure-1'),
+    html.Br(),
     html.A('Code on Github', href=githublink),
     html.Br(),
     html.A("Data Source", href=sourceurl)
@@ -80,20 +82,21 @@ app.layout = html.Div(children=[
              [Input('options-drop', 'value')])
 def make_figure(varname):
     mygraphtitle = f'Analysis on {varname} compared to Education Level'
-    mycolorscale = 'ylorrd' # Note: The error message will list possible color scales.
+    mycolorscale = '#e492e8' # Note: The error message will list possible color scales.
     mycolorbartitle = "Average Education Level"
     
     #data_chart = df.groupby([varname])['education-num'].mean().reset_index(name='Avg Education-Num')
-    data_chart = df.groupby(['native-country'])['education-num'].mean().reset_index(name='Avg Education-Num')
+    data_chart = df.groupby([varname])['education-num'].mean().reset_index(name='Avg Education-Num')
     
     #data = go.Bar(x=data_chart[varname],
                  #y=data_chart['Avg Education-Num'])
-    data = go.Bar(x=data_chart['native-country'],
-                  y=data_chart['Avg Education-Num'])
+    data = go.Bar(x=data_chart[varname],
+                  y=data_chart['Avg Education-Num'],
+                  marker=mycolorscale)
     
     
     mylayout = go.Layout(
-        title ='Test Title',
+        title =mygraphtitle,
         xaxis ='Test x axis',
         yaxis='Test y axis')
     
