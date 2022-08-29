@@ -62,7 +62,7 @@ app.title=tabtitle
 
 app.layout = html.Div(children=[
     html.H1('Census Data Analysis'),
-    html.H3('Select a variable for analysis:')
+    html.H3('Select a variable for analysis:'),
     html.Div([        
         dcc.Dropdown(
             id='options-drop',
