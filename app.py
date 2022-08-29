@@ -61,13 +61,13 @@ app.title=tabtitle
 
 ########### Set up the layout
 
-app.layout = html.Div(children=[
+app.layout = html.Div([
     html.H1('Census Data Analysis'),
     html.H3('Select a variable for analysis:'),
     dcc.Dropdown(
-            id='options-drop',
-            options=[{'label': i, 'value': i} for i in list_of_columns],
-            value='native-country'),
+        id='options-drop',
+        options=[{'label': i, 'value': i} for i in list_of_columns],
+        value='native-country'),
     html.Br(),
     dcc.Graph(id='figure_1'),
     html.Br(),
