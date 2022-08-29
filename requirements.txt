@@ -1,41 +1,12 @@
-aiohttp @ file:///home/conda/feedstock_root/build_artifacts/aiohttp_1649013154501/work
-aiosignal @ file:///home/conda/feedstock_root/build_artifacts/aiosignal_1636093929600/work
-amzn-sagemaker-studiolab @ file:///opt/conda/conda-bld/amzn_sagemaker_studiolab_1659982020163/work
-anyio @ file:///home/conda/feedstock_root/build_artifacts/anyio_1652463862396/work/dist
-argon2-cffi @ file:///home/conda/feedstock_root/build_artifacts/argon2-cffi_1640817743617/work
-argon2-cffi-bindings @ file:///home/conda/feedstock_root/build_artifacts/argon2-cffi-bindings_1649500321618/work
-asttokens @ file:///home/conda/feedstock_root/build_artifacts/asttokens_1618968359944/work
-async-timeout @ file:///home/conda/feedstock_root/build_artifacts/async-timeout_1640026696943/work
-attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1640799537051/work
-aws-embedded-metrics==1.0.7
-Babel @ file:///home/conda/feedstock_root/build_artifacts/babel_1651737115240/work
-backcall @ file:///home/conda/feedstock_root/build_artifacts/backcall_1592338393461/work
-backports.functools-lru-cache @ file:///home/conda/feedstock_root/build_artifacts/backports.functools_lru_cache_1618230623929/work
-beautifulsoup4 @ file:///home/conda/feedstock_root/build_artifacts/beautifulsoup4_1649463573192/work
-bleach @ file:///home/conda/feedstock_root/build_artifacts/bleach_1649361991009/work
-Brotli @ file:///home/conda/feedstock_root/build_artifacts/brotli-split_1648883617327/work
-brotlipy @ file:///home/conda/feedstock_root/build_artifacts/brotlipy_1648854164373/work
 certifi==2022.6.15
-cffi @ file:///home/conda/feedstock_root/build_artifacts/cffi_1636046055389/work
 charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1644853463426/work
 chart-studio==1.1.0
-click @ file:///home/conda/feedstock_root/build_artifacts/click_1651215153723/work
-colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1602866480661/work
-cryptography @ file:///home/conda/feedstock_root/build_artifacts/cryptography_1652967134882/work
 cycler==0.11.0
 dash @ file:///home/conda/feedstock_root/build_artifacts/dash_1655171539375/work
 dash-auth==1.4.1
 dash-core-components==2.0.0
 dash-html-components==2.0.0
 dash-table==5.0.0
-debugpy @ file:///home/conda/feedstock_root/build_artifacts/debugpy_1649586347330/work
-decorator @ file:///home/conda/feedstock_root/build_artifacts/decorator_1641555617451/work
-defusedxml @ file:///home/conda/feedstock_root/build_artifacts/defusedxml_1615232257335/work
-entrypoints @ file:///home/conda/feedstock_root/build_artifacts/entrypoints_1643888246732/work
-executing @ file:///home/conda/feedstock_root/build_artifacts/executing_1646044401614/work
-fastjsonschema @ file:///home/conda/feedstock_root/build_artifacts/python-fastjsonschema_1641751198313/work/dist
-Flask @ file:///home/conda/feedstock_root/build_artifacts/flask_1651670959703/work
-Flask-Compress @ file:///home/conda/feedstock_root/build_artifacts/flask-compress_1651163502372/work
 Flask-SeaSurf==1.1.1
 flit_core @ file:///home/conda/feedstock_root/build_artifacts/flit-core_1645629044586/work/source/flit_core
 fonttools==4.34.4
