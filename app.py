@@ -68,10 +68,11 @@ app.layout = html.Div(children=[
             id='options-drop',
             options=[{'label': i, 'value': i} for i in list_of_columns],
             value='native-country')]), 
-    html.Div([dcc.Graph(id='figure-1')]),
+    dcc.Graph(id='figure-1'),
     html.A('Code on Github', href=githublink),
     html.Br(),
-    html.A("Data Source", href=sourceurl),])
+    html.A("Data Source", href=sourceurl)
+])
 
 
 # make a function that can intake any varname and produce a map.
@@ -90,7 +91,13 @@ def make_figure(varname):
     data = go.Bar(x=data_chart['native-country'],
                   y=data_chart['Avg Education-Num'])
     
-    fig = go.Figure([data])
+    
+    mylayout = go.Layout(
+        title ='Test Title',
+        xaxis ='Test x axis',
+        yaxis='Test y axis')
+    
+    fig = go.Figure(data=data, layout=mylayout)
     #fig = px.bar(data_chart, x=[varname],y='Avg Education-Num')
 
 
@@ -101,9 +108,7 @@ def make_figure(varname):
     #     colorscale = mycolorscale,
     #     colorbar_title = mycolorbartitle,    )
     #fig = go.Figure(data)
-    fig.update_layout(
-        title_text = mygraphtitle
-    )
+    
     return fig
 
 
