@@ -86,21 +86,20 @@ def figure_1(varname):
     graph_title = f'Analysis on {varname} compared to Education Level'
     mycolorbartitle = "Average Education Level"
     
-    #data_chart = df.groupby([varname])['education-num'].mean().reset_index(name='Avg Education-Num')
+
     data_chart = df.groupby([varname])['education-num'].mean().reset_index(name='Avg Education-Num')
     
-    #data = go.Bar(x=data_chart[varname],
-                 #y=data_chart['Avg Education-Num'])
+
     data = go.Bar(x=data_chart[varname],
                   y=data_chart['Avg Education-Num'])
     
     
     mylayout = go.Layout(
         title =graph_title,
-        xaxis = dict(title = str(varname)), # x-axis label
+        xaxis = dict(title = str(varname)), 
         yaxis = dict(title = 'Avg Education-Num'))
     
-    fig = go.Figure(data=data, layout=mylayout)
+    fig = go.Figure(data=[data], layout=mylayout)
 
     
     return fig #, graph_title
