@@ -18,7 +18,7 @@ path = 'https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.da
 
 
 df = pd.read_csv(path,
-                names = ["age", "workclass","fnlwgt", "education", "education-num", "marital-status", "occupation", "relationship", "race", "sex", "capital-gain", "capital-loss", "hours-per-week", "native-country"],
+                names = ["age", "workclass","fnlwgt", "education", "education-num", "marital-status", "occupation", "relationship", "race", "sex", "capital-gain", "capital-loss", "hours-per-week", "native-country","> or < 50K"],
                 index_col=False,
                 na_values=[" ?"])
 #Creating apply function to bucketize hours-per-week series
@@ -49,7 +49,7 @@ list_of_columns.remove('capital-gain')
 list_of_columns.remove('capital-loss')
 list_of_columns.remove('hours-per-week')
 list_of_columns.remove('fnlwgt')
-
+list_of_columns.remove('> or < 50K')
 
 
 ########### Initiate the app
@@ -75,7 +75,8 @@ app.layout = html.Div([
     html.A('Code on Github', href=githublink),
     html.Br(),
     html.A("Data Source", href=sourceurl)
-],className='container')
+]
+    ,className='container')
 
 
 # make a function that can intake any varname and produce a map.
