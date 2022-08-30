@@ -79,10 +79,9 @@ app.layout = html.Div([
     ,className='container')
 
 
-# make a function that can intake any varname and produce a map.
-@app.callback(Output('figure_1', 'figure'),
-             # Output('graph_title', 'children'),
-              [Input('options-drop', 'value')])
+
+@app.callback(dash.dependencies.Output('figure_1', 'figure'),             
+              [dash.dependencies.Input('options-drop', 'value')])
 def figure_1(varname):
     graph_title = f'Analysis on {varname} compared to Education Level'
     mycolorbartitle = "Average Education Level"
@@ -103,7 +102,7 @@ def figure_1(varname):
     fig = go.Figure(data=[data], layout=mylayout)
 
     
-    return fig #, graph_title
+    return fig 
 
 
 ############ Deploy
