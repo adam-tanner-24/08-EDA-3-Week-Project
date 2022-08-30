@@ -97,22 +97,13 @@ def figure_1(varname):
     
     mylayout = go.Layout(
         title =graph_title,
-        xaxis = dict(title = 'Port of Embarkation'), # x-axis label
-        yaxis = dict(title = str(varname)))
+        xaxis = dict(title = str(varname)), # x-axis label
+        yaxis = dict(title = 'Avg Education-Num'))
     
     fig = go.Figure(data=data, layout=mylayout)
-    #fig = px.bar(data_chart, x=[varname],y='Avg Education-Num')
 
-
-    # data=go.Choropleth(
-    #     locations=df['State Code'], # Spatial coordinates
-    #     locationmode = 'USA-states', # set of locations match entries in `locations`
-    #     z = df[varname].astype(float), # Data to be color-coded
-    #     colorscale = mycolorscale,
-    #     colorbar_title = mycolorbartitle,    )
-    #fig = go.Figure(data)
     
-    return fig#, graph_title
+    return fig #, graph_title
 
 
 ############ Deploy
